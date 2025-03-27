@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Detection</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <header>
+        <h1>CHIKITSA NETRA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detection.html">Detection</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2><span style="color:#52a447">Chikitsa Netra</span> <span style="color:white">- Early Disease Detection</span></h2>
+        <h3 style="color:white">Upload Image for Disease Detection</h3>
+        
+        <div class="upload-container">
+            <label for="imageUpload" class="upload-box">
+                <img src="assets/images/doc.png" alt="Upload Icon">
+                Click or Drag to Upload
+            </label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        
+        <div id="previewContainer">
+            <img id="previewImage" src="" alt="Preview" class="hidden">
+        </div>
+        <button class="theme-button" onclick="startDetection()">Detect</button>
+        <div id="loading" class="hidden">Processing...</div>
+        <p id="result" class="hidden">Disease detected: <span class="highlight">Sample Disease</span></p>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
